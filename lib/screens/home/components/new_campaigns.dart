@@ -23,7 +23,20 @@ class NewCampaigns extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: [],
+            children: [
+              NewCampaignCard(
+                category: "LeapersAid",
+                image: "assets/images/Image Banner 1.png",
+                numOfDonations: "\$100,000",
+                press: () {},
+              ),
+              NewCampaignCard(
+                category: "FeedStreetKids",
+                image: "assets/images/Image Banner 2.png",
+                numOfDonations: "\$50,000",
+                press: () {},
+              )
+            ],
           ),
         ),
       ],
@@ -41,7 +54,7 @@ class NewCampaignCard extends StatelessWidget {
   }) : super(key: key);
 
   final String category, image;
-  final int numOfDonations;
+  final String numOfDonations;
   final GestureTapCallback press;
   @override
   Widget build(BuildContext context) {
