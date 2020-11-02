@@ -66,7 +66,7 @@ class NewCampaignCard extends StatelessWidget {
           width: getProportionateScreenWidth(242),
           height: getProportionateScreenWidth(100),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(15),
             child: Stack(
               children: [
                 Image.asset(
@@ -101,7 +101,7 @@ class NewCampaignCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfDonations Donates")
+                        TextSpan(text: "$numOfDonations Raised")
                       ],
                     ),
                   ),
