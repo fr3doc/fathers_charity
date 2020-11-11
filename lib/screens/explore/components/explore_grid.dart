@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class ExploreGrid extends StatelessWidget {
@@ -24,12 +25,110 @@ class ExploreGrid extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: getProportionateScreenHeight(10)),
+            SizedBox(height: getProportionateScreenHeight(1)),
             SingleChildScrollView(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
                 children: [
-                  Container(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            campaignsWidget(
+                              'LeapersAID',
+                              'Leprosarium',
+                              'charity2',
+                              kPrimaryColor.withOpacity(0.5),
+                              kPrimaryColor.withOpacity(0.8),
+                            ),
+                            SizedBox(height: getProportionateScreenHeight(20)),
+                            campaignsWidget(
+                                'Soup Kitchen',
+                                'Kanda UnderBridge',
+                                'charity',
+                                Color(0xffe9eefa),
+                                kPrimaryColor.withOpacity(0.3)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(height: getProportionateScreenHeight(50)),
+                            campaignsWidget(
+                                'Soup Kitchen',
+                                'Feed Street Kids',
+                                'charity4',
+                                Color(0xffe9eefa),
+                                kPrimaryColor.withOpacity(0.3)),
+                            SizedBox(height: getProportionateScreenHeight(20)),
+                            campaignsWidget(
+                              'LeapersAID',
+                              'Kordiabe Project',
+                              'charity3',
+                              kPrimaryColor.withOpacity(0.5),
+                              kPrimaryColor.withOpacity(0.8),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            campaignsWidget(
+                              'LeapersAID',
+                              'Leprosarium',
+                              'charity2',
+                              kPrimaryColor.withOpacity(0.5),
+                              kPrimaryColor.withOpacity(0.8),
+                            ),
+                            SizedBox(height: getProportionateScreenHeight(20)),
+                            campaignsWidget(
+                                'Soup Kitchen',
+                                'Kanda UnderBridge',
+                                'charity',
+                                Color(0xffe9eefa),
+                                kPrimaryColor.withOpacity(0.3)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(height: getProportionateScreenHeight(50)),
+                            campaignsWidget(
+                                'Soup Kitchen',
+                                'Feed Street Kids',
+                                'charity4',
+                                Color(0xffe9eefa),
+                                kPrimaryColor.withOpacity(0.3)),
+                            SizedBox(height: getProportionateScreenHeight(20)),
+                            campaignsWidget(
+                              'LeapersAID',
+                              'Kordiabe Project',
+                              'charity3',
+                              kPrimaryColor.withOpacity(0.5),
+                              kPrimaryColor.withOpacity(0.8),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -65,6 +164,46 @@ class ExploreGrid extends StatelessWidget {
             ),
           ),
           SizedBox(height: getProportionateScreenHeight(10)),
+          Text(
+            '$campaign',
+            style: TextStyle(
+              color:
+                  (bgColor == Color(0xffff5954)) ? Colors.white : Colors.black,
+              fontSize: 18,
+              height: 1,
+            ),
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+          Row(
+            children: <Widget>[
+              Container(
+                height: 5,
+                width: 100,
+                color: (bgColor == Color(0xffff5954))
+                    ? Colors.red
+                    : Color(0xff2657ce),
+              ),
+              Expanded(
+                child: Container(
+                  height: 5,
+                  color: (bgColor == Color(0xffff5954))
+                      ? Colors.white.withOpacity(0.5)
+                      : Color(0xff2657ce).withOpacity(0.5),
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+          Hero(
+            tag: '$img',
+            child: Container(
+              height: 80,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                image: AssetImage('assets/images/$img.png'),
+              )),
+            ),
+          )
         ],
       ),
     );
