@@ -1,5 +1,5 @@
 import 'package:fathers_charity/components/default_button.dart';
-import 'package:fathers_charity/models/campaign.dart';
+import 'package:fathers_charity/models/campaign/campaign.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
