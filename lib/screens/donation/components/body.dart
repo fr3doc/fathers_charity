@@ -17,8 +17,8 @@ class Body extends StatelessWidget {
             decoration: BoxDecoration(
               color: kPrimaryColor.withOpacity(0.03),
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
             ),
             child: Wrap(
@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: getProportionateScreenHeight(18)),
+          SizedBox(height: getProportionateScreenHeight(12)),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SingleChildScrollView(
@@ -72,7 +72,7 @@ class Body extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .headline6
-                        .copyWith(fontWeight: FontWeight.w400),
+                        .copyWith(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
