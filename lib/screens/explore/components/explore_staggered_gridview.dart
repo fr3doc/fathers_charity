@@ -12,7 +12,7 @@ class ExploreStaggeredGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(24),
+      padding: EdgeInsets.only(left: 24, right: 24, bottom: 24),
       child: StaggeredGridView.countBuilder(
         crossAxisCount: 4,
         mainAxisSpacing: 16,

@@ -10,9 +10,8 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          SizedBox(height: getProportionateScreenHeight(18)),
           ExploreHeader(),
-          SizedBox(height: getProportionateScreenHeight(2)),
+          SizedBox(height: getProportionateScreenHeight(10)),
           Expanded(
             child: ExploreStaggeredGridView(),
           ),

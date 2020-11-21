@@ -1,4 +1,4 @@
-import 'package:fathers_charity/screens/home/components/icon_btn_with_counter.dart';
+import 'package:fathers_charity/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
@@ -17,17 +17,18 @@ class ExploreHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Explore",
+            "Our Campaigns",
             style: TextStyle(
-              fontSize: getProportionateScreenWidth(22),
+              fontSize: getProportionateScreenWidth(18),
               fontWeight: FontWeight.w500,
+              color: dTextColor,
             ),
           ),
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Bell.svg",
-            numOfItem: 3,
-            press: () {},
-          ),
+          // IconBtnWithCounter(
+          //   svgSrc: "assets/icons/Bell.svg",
+          //   numOfItem: 3,
+          //   press: () {},
+          // ),
         ],
       ),
     );
